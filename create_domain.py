@@ -1,0 +1,46 @@
+# Run create_domain_script
+# /weblogic/product/12.2.1.2/oracle_common/common/bin/wlst.sh /weblogic/bin/crate_domain.py
+
+execfile('/weblogic/bin/create_domain_variables.py');
+readTemplate( my_base_dir+'/product/12.2.1.2/wlserver/common/templates/wls/wls.jar')
+
+cd('Servers/AdminServer')
+cmo.setListenAddress( my_hostname )
+setOption('ServerStartMode','prod')
+set('ListenPort', my_admin_port)
+# create('AdminServer','SSL')
+# cd('SSL/AdminServer')
+# set('Enabled', 'True')
+# set('ListenPort', 7011)
+cd('/Security/base_domain/User/weblogic')
+cmo.setPassword( my_passwd )
+setOption('ServerStartMode','prod')
+setOption('OverwriteDomain', 'true')
+
+cd('/')
+create( my_managed, 'Server')
+cd ('Servers')
+cd ( my_managed )
+set('ListenPort', my_managed_port)
+set('ListenAddress', my_hostname)
+
+cd('/')
+create( my_cluster, 'Cluster')
+assign('Server', my_managed, 'Cluster', my_cluster)
+cd('Cluster/'+my_cluster)
+set('ClusterMessagingMode', 'unicast')
+set('WeblogicPluginEnabled', 'true')
+
+cd('/')
+create( my_hostname, 'Machine')
+assign( 'Server', my_managed, 'Machine', my_hostname)
+cd('Machines/' + my_hostname + '/')
+create( my_hostname, 'NodeManager')
+cd('NodeManager/' + my_hostname)
+# set('NMType', 'SSL')
+set('ListenAddress', my_hostname)
+set('ListenPort', my_NM_port)
+set('DebugEnabled', 'false')
+writeDomain( my_base_dir+'/config/'+my_domain)
+closeTemplate()
+exit()
