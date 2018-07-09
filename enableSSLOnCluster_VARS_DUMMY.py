@@ -1,5 +1,7 @@
 # WLST Connection Details
-adminUsername, adminPassword, adminURL = 'weblogic', 'weblogicPass', 't3://...:9001/'
+userConfigFilePath='/weblogic/bin/WLSTSecureConfigFile'
+userKeyFilePath='/weblogic/bin/WLSTSecureKeyFile'
+adminURL='t3s://...:7001'
 
 # Admin Server's Configuration
 baseAdminPort   =   9001
