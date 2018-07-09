@@ -40,7 +40,7 @@ def retargetDS( jdbcSystemRsrc, trgts ):
 #=======================================================================================
 print 'Load variables from file: convertDataSourceToGridLink_VARS.py'
 execfile('convertDataSourceToGridLink_VARS.py')
-connect(userConfigFile='/weblogic/bin/WLSTSecureConfigFile',userKeyFile='/weblogic/bin/WLSTSecureKeyFile',url=adminUrl)
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 for jdbcSystemResource in cmo.getJDBCSystemResources():
   targets = untargetDS( jdbcSystemResource )
   enableActiveGridLink( jdbcSystemResource, url, rcuUrl, ons_node_list )
