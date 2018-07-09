@@ -120,7 +120,7 @@ def disconnectFromAdminServer():
 #=======================================================================================
 execfile( 'createJMS_GW_VARS.py' )
 printScriptVariables( 'createJMS_GW_VARS.py' )
-connectToAdminServer( adminUsername, adminPassword, adminURL )
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 jmsTargetServerMBean= getMBean( "/Servers/"+ jmsTargetServer )
 if jmsTargetServerMBean is None:
   sys.exit("Target Server ["+ jmsTargetServer +"] MBean is None") 
