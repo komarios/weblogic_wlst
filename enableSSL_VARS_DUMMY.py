@@ -1,12 +1,12 @@
-baseAdminPort   =  9001
+baseAdminPort   =   9001
 plainAdminPort  =  19001
 SSLAdminPort    =  29001
-baseMServerPort =  9002
+baseMServerPort =   9002
 plainMServerPort=  19002
-adminMServerPort=  9012
+adminMServerPort=   9012
 serversHostname = 'myhostname'
 managedName     = 'myManagedName'
 keystorePass    = 'myPass'
 privatekeyPass  = 'myPass'
-keystoreFile    = '/my/file/to/keystore/location/my.jks'
+keystoreFile    = '/my/file/to/keystore/location/myManagedName_keystore.jks'
 adminUsername, adminPassword, adminURL = 'weblogic', 'weblogicPass', 't3://...:9001/'
