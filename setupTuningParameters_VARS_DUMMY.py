@@ -1,5 +1,7 @@
 # Set admin url pointing to AdminServer
-adminUrl='t3s://...:7001'
+userConfigFilePath='/weblogic/bin/WLSTSecureConfigFile'
+userKeyFilePath='/weblogic/bin/WLSTSecureKeyFile'
+adminURL='t3s://...:7001'
 
 # Domain Level
 jtaTimeoutSeconds=300
