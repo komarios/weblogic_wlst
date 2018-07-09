@@ -2,7 +2,7 @@
 print 'Load variables from file: create_GridLink_Datasource_VARS.py'
 execfile('create_GridLink_Datasource_VARS.py')
 
-connect( userConfigFile='/weblogic/bin/WLSTSecureConfigFile', userKeyFile='/weblogic/bin/WLSTSecureKeyFile', url='t3s://...:7001' )
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 
 edit()
 startEdit()
