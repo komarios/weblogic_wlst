@@ -13,7 +13,7 @@ print "   jmsModule        = "+jmsModule
 print "   jmsSubdeployment = "+jmsSubdeployment
 #####################################################################################################################
 print "Connect to Admin server ..."
-connect(adminUsername, adminPassword, adminURL)
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 #####################################################################################################################
 print "Start new edit session ..."
 edit()
