@@ -1,7 +1,8 @@
 
 execfile('createUser_VARS.py')
 
-connect( adminUsername, adminPassword, adminURL )
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
+
 securityConfig= cmo.getSecurityConfiguration().getDefaultRealm().lookupAuthenticationProvider( authProvider )
 for i in range(0, len(newUserNames)):
   print "Create User "
