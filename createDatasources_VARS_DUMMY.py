@@ -1,7 +1,7 @@
 # Set all variables from values in properties file.
-adminUsername='weblogic'
-adminPassword='...'
-adminURL     ='t3s://...:7001'
+userConfigFilePath='/weblogic/bin/WLSTSecureConfigFile'
+userKeyFilePath='/weblogic/bin/WLSTSecureKeyFile'
+adminURL='t3s://...:7001'
 
 dsTargetName ='managed_server1'
 dsTargetType ='Cluster'
