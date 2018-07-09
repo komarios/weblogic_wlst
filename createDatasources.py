@@ -3,7 +3,7 @@ print "Load variables from file: createDatasources_VARS.py"
 execfile('create_datasources_VARS.py')
 #####################################################################################################################
 # Connect to the AdminServer.
-connect(adminUsername, adminPassword, adminURL)
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 edit()
 startEdit()
 #####################################################################################################################
