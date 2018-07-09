@@ -1,6 +1,6 @@
 print 'Load variables from file: setupTuningParameters_VARS.py'
 execfile('setupTuningParameters_VARS.py')
-connect(userConfigFile='/weblogic/bin/WLSTSecureConfigFile',userKeyFile='/weblogic/bin/WLSTSecureKeyFile',url=adminUrl)
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 edit()
 startEdit()
 
