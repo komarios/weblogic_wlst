@@ -1,5 +1,5 @@
 #####################################################################################################################
-print "Load variables from file: create_datasources_VARS.py"
+print "Load variables from file: createDatasources_VARS.py"
 execfile('create_datasources_VARS.py')
 #####################################################################################################################
 # Connect to the AdminServer.
