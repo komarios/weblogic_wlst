@@ -45,7 +45,7 @@ execfile( 'redeployApp_VARS.py' )
 # Connect
 #=======================================================================================
 myPrintln( 'Connecting...' )
-connect( admin_user, admin_pass, admin_url );
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 
 #=======================================================================================
 # Shutdown managed server
