@@ -1,7 +1,7 @@
 # Run create_domain_script
 # /weblogic/product/12.2.1.2/oracle_common/common/bin/wlst.sh /weblogic/bin/crate_domain.py
 
-execfile('/weblogic/bin/create_domain_variables.py');
+execfile('/weblogic/bin/createDomain_VARS.py');
 readTemplate( my_base_dir+'/product/12.2.1.2/wlserver/common/templates/wls/wls.jar')
 
 cd('Servers/AdminServer')
