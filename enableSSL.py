@@ -24,7 +24,7 @@ def setupClusterReplication( p_path ):
     set('SecureReplicationEnabled', true)
 
 execfile( 'enableSSL_VARS.py')
-connect(  adminUsername, adminPassword, adminURL)
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 edit()
 startEdit()
 #####################################################################################################################
