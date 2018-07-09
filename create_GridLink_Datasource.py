@@ -2,14 +2,12 @@
 print 'Load variables from file: create_GridLink_Datasource_VARS.py'
 execfile('create_GridLink_Datasource_VARS.py')
 
-#connect( adminUsername, adminPassword, adminURL )
-connect( userConfigFile='/weblogic/bin/WLSTSecureConfigFile', userKeyFile='/weblogic/bin/WLSTSecureKeyFile', url='t3s://roaspr1:7001' )
-  
+connect( userConfigFile='/weblogic/bin/WLSTSecureConfigFile', userKeyFile='/weblogic/bin/WLSTSecureKeyFile', url='t3s://...:7001' )
+
 edit()
 startEdit()
 #####################################################################################################################
 for i in range(0, len(dsName)):
-
   print '========================================='
   print '=   Creating GridLink DataSource  ....  ='
   print '========================================='
