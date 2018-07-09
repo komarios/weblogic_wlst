@@ -1,0 +1,10 @@
+my_base_dir='/weblogic'
+my_java_home='/opt/java8'
+my_hostname='host1'
+my_admin_port=9001
+my_NM_port=5556
+my_passwd='weblogicPass'
+my_domain='my_domain'
+my_managed='managed1'
+my_managed_port=9002
+my_cluster='my_cluster'
