@@ -1,6 +1,6 @@
 #####################################################################################################################
 print 'Load variables from file: create_GridLink_Datasource_VARS.py'
-execfile('create_GridLink_Datasource_VARS.py')
+execfile('createGridLinkDatasource_VARS.py')
 
 connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 
