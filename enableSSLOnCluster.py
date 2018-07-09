@@ -26,7 +26,7 @@ def setupClusterReplication( p_path ):
 print( '   LOAD Variables from file: enableSSL_CLUSTER_VARS.py' )
 execfile( 'enableSSLOnCluster_VARS.py')
 print( '   Connect to Admin Server' )
-connect(  adminUsername, adminPassword, adminURL)
+connect( userConfigFile=userConfigFilePath, userKeyFile=userKeyFilePath, url=adminUrl )
 edit()
 startEdit()
 #####################################################################################################################
