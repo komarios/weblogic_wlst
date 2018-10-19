@@ -1,2 +1,2 @@
 # weblogic_wlst
-WebLogic wlst scripts
+WebLogic wlst automation scripts
